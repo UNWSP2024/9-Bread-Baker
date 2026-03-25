@@ -1,3 +1,8 @@
+# Name: Ariana Fafach
+# Date: 3/25/2026
+# Title: Program #1: Item Counter
+
+
 # Program #1: Item Counter
 # Assume a file containing a series of names (as strings) is named names.txt 
 # (Use the included example file names.txt) and exists on the computer's disk.
@@ -6,8 +11,21 @@
 def count_file_lines():
     ######################
     # Add your code here #
+
+    # Initialize number_of_names variable:
+    number_of_names = 0
+
+    # For loop add 1 to number_of_names for every name in names.txt:
+    names = open("names.txt", 'r')
+    for name in names:
+        number_of_names += 1
+    
+    # Close names.txt file:
+    names.close()
+
     ######################
-    print('In the count_file_lines function')
+    # Print the result:
+    print(f"There are {number_of_names} names stored in names.txt.")
 
 
 
